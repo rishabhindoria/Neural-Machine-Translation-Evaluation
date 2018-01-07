@@ -12,3 +12,19 @@ using Python libraries such as nltk, sklearn and numpy.
 • Saved the model using Python Pickle library to a file for quick use next time to classify new test data.
 
 • Outperformed other classmates to be in top 5 among 180. 
+
+# Running instructions
+
+• First paramter is the training data set file containing two sentences along with the reference sentence and the second paramter is the     file containing labels for supervised learning
+
+  python computeTrainFeatures.py -i dev.train -l data/dev.train.answers -n 38234
+
+• Use: "python computeTrainFeatures.py -h" cmd for getting help regarding explaination of parameters.
+
+• Similarly test features can be computed using: python computeTestFeatures.py -i dev.test -n 18351
+
+• Compute the model on the computed features using: python runModel.py
+
+• Run the model for generating predictions and getting accuracy score
+  
+  python compare-with-human-evaluation -i dev.test -t data/dev.test.answers < eval.out
