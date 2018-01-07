@@ -1,0 +1,3 @@
+python computeTrainFeatures.py -i dev.train -l data/dev.train.answers -n 38234
+python computeTestFeatures.py -i dev.test -n 18351
+python runModel.py;python compare-with-human-evaluation -i dev.test -t data/dev.test.answers < eval.out
