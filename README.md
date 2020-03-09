@@ -18,13 +18,23 @@ Help and available options can be listed by the following cmd
 ```
 
 ```
-usage: html_to_markdown.py [-h] -i INPUT_HTML_FILE [-o OUTPUT_MD_FILE]  
- [-a {1,2,3}]  
-Program to find and convert HTML Tables into markdown. HTML file is read from  
-inputs/ folder and output md file is written in outputs/ folder  
-  
-optional arguments:  
- -h, --help            show this help message and exit -i INPUT_HTML_FILE, --input_html_file INPUT_HTML_FILE Input html file path -o OUTPUT_MD_FILE, --output_md_file OUTPUT_MD_FILE Enter name of output md file to be stored in outputs/ folder -a {1,2,3}, --alignment {1,2,3} Choose alignment for text in markdown tables 1: left, 2: right, 3: center  
+usage: html_to_markdown.py [-h] -i INPUT_HTML_FILE [-o OUTPUT_MD_FILE]
+                           [-a {1,2,3}]
+
+Program to find and convert HTML Tables into markdown. HTML file is read from
+inputs/ folder and output md file is written in outputs/ folder
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_HTML_FILE, --input_html_file INPUT_HTML_FILE
+                        Input html file path
+  -o OUTPUT_MD_FILE, --output_md_file OUTPUT_MD_FILE
+                        Enter name of output md file to be stored in outputs/
+                        folder
+  -a {1,2,3}, --alignment {1,2,3}
+                        Choose alignment for text in markdown tables 1: left,
+                        2: right, 3: center
+
 ```
 <br>  
 In the terminal enter following cmd to run the program:  
