@@ -1,30 +1,65 @@
-# Neural-Machine-Translation-Evaluation
-
-• Built a classifier for evaluating quality of machine translation to predict best matching sentence to the reference sentence.
-
-• Performed feature engineering to select metrics like METEOR and BLEU for evaluating quality of machine translation
-using Python libraries such as nltk, sklearn and numpy.
-
-• Computed features once on the training data (consisiting of sentences) like cosine similarity from neural skip n-gram models and pos tagging to better take context into account and then stored them as file.
-
-• Trained a combination of SVM, RandomForest, neural MLP based voting classifier on the computed features. 
-
-• Saved the model using Python Pickle library to a file for quick use next time to classify new test data.
-
-• Outperformed other classmates to be in top 5 among 180. 
-
-# Running instructions
-
-• First paramter is the training data set file containing two sentences along with the reference sentence and the second paramter is the     file containing labels for supervised learning
-
-  python computeTrainFeatures.py -i dev.train -l data/dev.train.answers -n 38234
-
-• Use: "python computeTrainFeatures.py -h" cmd for getting help regarding explaination of parameters.
-
-• Similarly test features can be computed using: python computeTestFeatures.py -i dev.test -n 18351
-
-• Compute the model on the computed features using: python runModel.py
-
-• Run the model for generating predictions and getting accuracy score
+## HTML Table to markdown table converter  
   
-  python compare-with-human-evaluation -i dev.test -t data/dev.test.answers < eval.out
+This program takes an html file as input, validates it and then searches for all tables within it to convert them to a single md file as output containing a list of tables  
+  
+#### Required Packages:  
+  
+* beautifulsoup4 - 4.8.1   
+* lxml - 4.4.2    
+  
+> Tested on python version - 3.7.5  
+  
+## How to use  
+  
+Help and available options can be listed by the following cmd  
+  
+```  
+ python3 html_to_markdown.py -h  
+```
+
+```
+usage: html_to_markdown.py [-h] -i INPUT_HTML_FILE [-o OUTPUT_MD_FILE]  
+ [-a {1,2,3}]  
+Program to find and convert HTML Tables into markdown. HTML file is read from  
+inputs/ folder and output md file is written in outputs/ folder  
+  
+optional arguments:  
+ -h, --help            show this help message and exit -i INPUT_HTML_FILE, --input_html_file INPUT_HTML_FILE Input html file path -o OUTPUT_MD_FILE, --output_md_file OUTPUT_MD_FILE Enter name of output md file to be stored in outputs/ folder -a {1,2,3}, --alignment {1,2,3} Choose alignment for text in markdown tables 1: left, 2: right, 3: center  
+```
+<br>  
+In the terminal enter following cmd to run the program:  
+  
+```  
+python3 html_to_markdown.py -i inputs/input3.html -o output3.md -a 1  
+```  
+  
+<br>  
+Example output stored in `outputs/` folder as a md file:  
+
+  
+## Found 1 table  
+  
+  
+### Table 1:  
+  
+  
+Firstname | Lastname  
+--- | ---  
+Jill | Smith  
+Eve | Jackson  
+  
+  
+<br><br>  
+***  
+## Run Tests  
+  
+From ```project``` root dir:  
+  
+```shell  
+python3 tests.py  
+```  
+  
+  
+## Contact  
+  
+Feel free to contact me at my email indoria@usc.edu
